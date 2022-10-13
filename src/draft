@@ -1,0 +1,60 @@
+2021/11/03 23:54:40 {
+    0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73 
+    [0x0d3648bd0f6ba80134a33ba9275ac585d9d315f0ad8355cddefde31afa28d0e9 
+        0x0000000000000000000000002c0d8483f3ab6aac47be8f10a37da2784e15487c 
+        0x000000000000000000000000bb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c] 
+        [0 0 0 0 0 0 0 0 0 0 0 0 177 91 199 190 240 191 60 0 255 87 99 158 162 245 247 182 50 72 187 179 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7 196 58] 
+        12337249 
+        0xcf32f1e5426423e660e7912ed820c44d64ff6294e689a881710646833515a7ea 
+        19 0x8d41e8a3774304a08b1fe190bbe344d102f9e1d3d6a55a2c36f9c8196cf1e9a4 81 false}
+
+// ADD PAIR
+{
+    "address": "0xca143ce32fe78f1f7019d7d551a6402fc5350c73",
+    "topics": [
+    "0x0d3648bd0f6ba80134a33ba9275ac585d9d315f0ad8355cddefde31afa28d0e9",
+    "0x0000000000000000000000002c0d8483f3ab6aac47be8f10a37da2784e15487c",
+    "0x000000000000000000000000bb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c"
+    ],
+    "data": "0x000000000000000000000000b15bc7bef0bf3c00ff57639ea2f5f7b63248bbb3000000000000000000000000000000000000000000000000000000000007c43a",
+    "blockNumber": "0xbc4061",
+    "transactionHash": "0xcf32f1e5426423e660e7912ed820c44d64ff6294e689a881710646833515a7ea",
+    "transactionIndex": "0x13",
+    "blockHash": "0x8d41e8a3774304a08b1fe190bbe344d102f9e1d3d6a55a2c36f9c8196cf1e9a4",
+    "logIndex": "0x51",
+    "removed": false
+}
+
+
+// PAIR MINT
+{
+    "address": "0xb15bc7bef0bf3c00ff57639ea2f5f7b63248bbb3",
+    "topics": [
+    "0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c6fef26394f4c03821c4f",
+    "0x00000000000000000000000010ed43c718714eb63d5aa57b78b54704e256024e"
+    ],
+    "data": "0x00000000000000000000000000000000000000000000003635c9adc5dea0000000000000000000000000000000000000000000000000000000005af3107a4000",
+    "blockNumber": "0xbc4061",
+    "transactionHash": "0xcf32f1e5426423e660e7912ed820c44d64ff6294e689a881710646833515a7ea",
+    "transactionIndex": "0x13",
+    "blockHash": "0x8d41e8a3774304a08b1fe190bbe344d102f9e1d3d6a55a2c36f9c8196cf1e9a4",
+    "logIndex": "0x59",
+    "removed": false
+}
+
+
+// Create database
+CREATE TABLE `events` (
+    `uid` INTEGER PRIMARY KEY AUTOINCREMENT,
+    `token1` VARCHAR(42),
+    `token2` VARCHAR(42),
+    `amount1` VARCHAR(66),
+    `amount2` VARCHAR(66),
+    `blockNumber` VARCHAR(64),
+    `blockTimestamp` VARCHAR(64),
+    `timestamp` DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ', 'now'))
+);
+
+blocktimestamp = 2021/11/04 09:56:41
+ws event capture at = 2021/11/04 02:56:42
+save data to db at = 2021/11/04 02:56:43.251Z
